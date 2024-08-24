@@ -140,10 +140,5 @@ function getAccessToken($key): string
         'grant_type' => 'urn:ietf:params:oauth:grant-type:jwt-bearer',
         'assertion' => $jwt,
     ]);
-    echo($response);
-    echo($response);
-    echo($response);
-
-
     return $response->json('access_token');
 }
