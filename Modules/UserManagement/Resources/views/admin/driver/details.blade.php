@@ -56,19 +56,19 @@
                                             </div>
                                             <div>
                                                 <span class="fw-bold">{{translate("Service")}}: </span>
-                                                <span>
-                                                    @if($commonData['driver']?->driverDetails?->service)
-                                                        @if(in_array('ride_request',$commonData['driver']?->driverDetails?->service) && in_array('parcel',$commonData['driver']?->driverDetails?->service))
-                                                            {{translate("Ride Request")}}, {{translate("Parcel")}} ({{translate('capacity').'-'. ($commonData['driver']->vehicle->parcel_weight_capacity != null ?? $commonData['driver']->vehicle->parcel_weight_capacity ? 0 .translate("kg"): translate('unlimited')) }})
-                                                        @elseif(in_array('ride_request',$commonData['driver']?->driverDetails?->service))
-                                                            {{translate("Ride Request")}}
-                                                        @elseif(in_array('parcel',$commonData['driver']?->driverDetails?->service))
-                                                            {{translate("Parcel")}} ({{translate('capacity').'-'. ($commonData['driver']->vehicle?->parcel_weight_capacity != null ? $commonData['driver']->vehicle?->parcel_weight_capacity ?? 0 .translate("kg"): translate('unlimited')) }})
-                                                        @endif
-                                                    @else
-                                                        {{translate("Ride Request")}}, {{translate("Parcel")}} ({{translate('capacity').'-'. ($commonData['driver']->vehicle?->parcel_weight_capacity != null ? $commonData['driver']->vehicle?->parcel_weight_capacity ?? 0 .translate("kg"): translate('unlimited')) }})
-                                                    @endif
-                                                </span>
+{{--                                                <span>--}}
+{{--                                                    @if($commonData['driver']?->driverDetails?->service)--}}
+{{--                                                        @if(in_array('ride_request',$commonData['driver']?->driverDetails?->service) && in_array('parcel',$commonData['driver']?->driverDetails?->service))--}}
+{{--                                                            {{translate("Ride Request")}}, {{translate("Parcel")}} ({{translate('capacity').'-'. ($commonData['driver']->vehicle->parcel_weight_capacity != null ?? $commonData['driver']->vehicle->parcel_weight_capacity ? 0 .translate("kg"): translate('unlimited')) }})--}}
+{{--                                                        @elseif(in_array('ride_request',$commonData['driver']?->driverDetails?->service))--}}
+{{--                                                            {{translate("Ride Request")}}--}}
+{{--                                                        @elseif(in_array('parcel',$commonData['driver']?->driverDetails?->service))--}}
+{{--                                                            {{translate("Parcel")}} ({{translate('capacity').'-'. ($commonData['driver']->vehicle?->parcel_weight_capacity != null ? $commonData['driver']->vehicle?->parcel_weight_capacity ?? 0 .translate("kg"): translate('unlimited')) }})--}}
+{{--                                                        @endif--}}
+{{--                                                    @else--}}
+{{--                                                        {{translate("Ride Request")}}, {{translate("Parcel")}} ({{translate('capacity').'-'. ($commonData['driver']->vehicle?->parcel_weight_capacity != null ? $commonData['driver']->vehicle?->parcel_weight_capacity ?? 0 .translate("kg"): translate('unlimited')) }})--}}
+{{--                                                    @endif--}}
+{{--                                                </span>--}}
                                             </div>
 
                                         </div>
